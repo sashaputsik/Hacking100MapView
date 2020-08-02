@@ -17,6 +17,7 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="QCR-jb-IY2">
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="tintColor" red="0.92364996669999999" green="0.1263131797" blue="0.54539424179999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </mapView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X11-F9-Ovg">
                                 <rect key="frame" x="0.0" y="545" width="375" height="122"/>
@@ -25,12 +26,19 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0K4-Ja-7ut">
                                         <rect key="frame" x="10" y="5" width="357" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <fontDescription key="fontDescription" name="NotoSansMyanmar-Bold" family="Noto Sans Myanmar" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNe-CP-npn">
-                                        <rect key="frame" x="10" y="26" width="357" height="89"/>
+                                        <rect key="frame" x="10" y="26" width="357" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="NotoSansMyanmar-Light" family="Noto Sans Myanmar" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VXU-ll-Mk6">
+                                        <rect key="frame" x="10" y="48" width="357" height="26"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
@@ -53,6 +61,7 @@
                     <connections>
                         <outlet property="infoLabel" destination="iNe-CP-npn" id="KFP-Qd-HOH"/>
                         <outlet property="infoView" destination="X11-F9-Ovg" id="QQ4-ZQ-pRT"/>
+                        <outlet property="jobTimeIntervalLabel" destination="VXU-ll-Mk6" id="9MW-nl-Lee"/>
                         <outlet property="mapView" destination="QCR-jb-IY2" id="ExN-fZ-BiI"/>
                         <outlet property="nameLabel" destination="0K4-Ja-7ut" id="2D6-26-SMO"/>
                     </connections>

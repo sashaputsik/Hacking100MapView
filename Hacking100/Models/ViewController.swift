@@ -1,11 +1,12 @@
-import UIKit
 import MapKit
-class ViewController: UIViewController, MKMapViewDelegate {
+import UIKit
+class ViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var infoView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var jobTimeIntervalLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         addedCapital()
@@ -17,40 +18,10 @@ class ViewController: UIViewController, MKMapViewDelegate {
         let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
         mapView.setRegion(region, animated: true)
         infoView.frame = CGRect(x: 0, y: 900, width: view.frame.width, height: 50)
+        
     }
     
 
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        guard annotation is Wildberries else{return nil}
-        let id = "Capital"
-        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: id)
-        
-        if annotationView == nil{
-            annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: id)
-            annotationView?.canShowCallout = true
-            let infoButton = UIButton(type: .infoDark)
-            annotationView?.rightCalloutAccessoryView = infoButton
-
-            
-        }else{
-            annotationView?.annotation = annotation
-        }
-        return annotationView
-    }
-    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        guard let wildBr = view.annotation as? Wildberries else{return}
-        let placeName = wildBr.title
-        let placeInfo = wildBr.info        
-        UIView.animate(withDuration: 0.5) {
-            self.infoView.frame = CGRect(x: 5, y: 540, width: 365, height: 120)
-        }
-        self.infoLabel.text = placeInfo
-        self.nameLabel.text = placeName
-    }
-    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
-        UIView.animate(withDuration: 0.5) {
-            self.infoView.frame = CGRect(x: 5, y: 900, width: 365, height: 120)
-        }
-    }
+    
 }
 

@@ -14,7 +14,8 @@
 		9FDE149624D2FF09006A1395 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FDE149424D2FF09006A1395 /* Main.storyboard */; };
 		9FDE149824D2FF0A006A1395 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FDE149724D2FF0A006A1395 /* Assets.xcassets */; };
 		9FDE149B24D2FF0A006A1395 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FDE149924D2FF0A006A1395 /* LaunchScreen.storyboard */; };
-		9FDE14A324D3044E006A1395 /* Capital.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDE14A224D3044E006A1395 /* Capital.swift */; };
+		9FDE14A324D3044E006A1395 /* Wildberries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDE14A224D3044E006A1395 /* Wildberries.swift */; };
+		9FFAE6C624D6E07B00968EB3 /* ExtensionViewControllerMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFAE6C524D6E07B00968EB3 /* ExtensionViewControllerMapViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +28,8 @@
 		9FDE149724D2FF0A006A1395 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FDE149A24D2FF0A006A1395 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9FDE149C24D2FF0A006A1395 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9FDE14A224D3044E006A1395 /* Capital.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capital.swift; sourceTree = "<group>"; };
+		9FDE14A224D3044E006A1395 /* Wildberries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wildberries.swift; sourceTree = "<group>"; };
+		9FFAE6C524D6E07B00968EB3 /* ExtensionViewControllerMapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionViewControllerMapViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +94,7 @@
 		9FFAE6C124D6DF3C00968EB3 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				9FDE14A224D3044E006A1395 /* Capital.swift */,
+				9FDE14A224D3044E006A1395 /* Wildberries.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				9F6124D924D6062500B75FA3 /* ExtensionViewController.swift */,
+				9FFAE6C524D6E07B00968EB3 /* ExtensionViewControllerMapViewDelegate.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -195,8 +198,9 @@
 				9FDE149324D2FF09006A1395 /* ViewController.swift in Sources */,
 				9F6124DA24D6062500B75FA3 /* ExtensionViewController.swift in Sources */,
 				9FDE148F24D2FF09006A1395 /* AppDelegate.swift in Sources */,
-				9FDE14A324D3044E006A1395 /* Capital.swift in Sources */,
+				9FDE14A324D3044E006A1395 /* Wildberries.swift in Sources */,
 				9FDE149124D2FF09006A1395 /* SceneDelegate.swift in Sources */,
+				9FFAE6C624D6E07B00968EB3 /* ExtensionViewControllerMapViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
