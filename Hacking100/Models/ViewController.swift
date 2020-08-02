@@ -4,9 +4,9 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var infoView: UIView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var jobTimeIntervalLabel: UILabel!
+    @IBOutlet weak var infoLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         addedCapital()

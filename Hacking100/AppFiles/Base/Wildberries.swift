@@ -3,16 +3,18 @@ import MapKit
 class Wildberries: NSObject, MKAnnotation {
     var title: String?
     var coordinate: CLLocationCoordinate2D
-    var info: String
+    var address: String
     var jobTimeInterval: String
+    var info: String
     init(title: String,
          coordinate: CLLocationCoordinate2D,
-         info: String,
-         jobTimeInterval: String) {
+         address: String,
+         jobTimeInterval: String, info: String) {
         self.title = title
         self.coordinate = coordinate
-        self.info = info
+        self.address = address
         self.jobTimeInterval = jobTimeInterval
+        self.info = info
     }
 }
 
