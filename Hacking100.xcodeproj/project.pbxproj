@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F6124DA24D6062500B75FA3 /* ExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6124D924D6062500B75FA3 /* ExtensionViewController.swift */; };
 		9FDE148F24D2FF09006A1395 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDE148E24D2FF09006A1395 /* AppDelegate.swift */; };
 		9FDE149124D2FF09006A1395 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDE149024D2FF09006A1395 /* SceneDelegate.swift */; };
 		9FDE149324D2FF09006A1395 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDE149224D2FF09006A1395 /* ViewController.swift */; };
 		9FDE149624D2FF09006A1395 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FDE149424D2FF09006A1395 /* Main.storyboard */; };
 		9FDE149824D2FF0A006A1395 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FDE149724D2FF0A006A1395 /* Assets.xcassets */; };
 		9FDE149B24D2FF0A006A1395 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FDE149924D2FF0A006A1395 /* LaunchScreen.storyboard */; };
+		9FDE14A324D3044E006A1395 /* Capital.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDE14A224D3044E006A1395 /* Capital.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F6124D924D6062500B75FA3 /* ExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionViewController.swift; sourceTree = "<group>"; };
 		9FDE148B24D2FF09006A1395 /* Hacking100.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hacking100.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FDE148E24D2FF09006A1395 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FDE149024D2FF09006A1395 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		9FDE149724D2FF0A006A1395 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FDE149A24D2FF0A006A1395 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9FDE149C24D2FF0A006A1395 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FDE14A224D3044E006A1395 /* Capital.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capital.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,65 @@
 		9FDE148D24D2FF09006A1395 /* Hacking100 */ = {
 			isa = PBXGroup;
 			children = (
-				9FDE148E24D2FF09006A1395 /* AppDelegate.swift */,
-				9FDE149024D2FF09006A1395 /* SceneDelegate.swift */,
-				9FDE149224D2FF09006A1395 /* ViewController.swift */,
-				9FDE149424D2FF09006A1395 /* Main.storyboard */,
-				9FDE149724D2FF0A006A1395 /* Assets.xcassets */,
-				9FDE149924D2FF0A006A1395 /* LaunchScreen.storyboard */,
-				9FDE149C24D2FF0A006A1395 /* Info.plist */,
+				9FFAE6BE24D6DF0C00968EB3 /* AppFiles */,
+				9FFAE6C324D6DF5A00968EB3 /* Models */,
+				9FFAE6C424D6DF6100968EB3 /* Storyboards */,
 			);
 			path = Hacking100;
+			sourceTree = "<group>";
+		};
+		9FFAE6BE24D6DF0C00968EB3 /* AppFiles */ = {
+			isa = PBXGroup;
+			children = (
+				9FFAE6C124D6DF3C00968EB3 /* Base */,
+				9FFAE6C224D6DF4700968EB3 /* Extensions */,
+				9FFAE6BF24D6DF1600968EB3 /* Files */,
+			);
+			path = AppFiles;
+			sourceTree = "<group>";
+		};
+		9FFAE6BF24D6DF1600968EB3 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				9FDE148E24D2FF09006A1395 /* AppDelegate.swift */,
+				9FDE149724D2FF0A006A1395 /* Assets.xcassets */,
+				9FDE149C24D2FF0A006A1395 /* Info.plist */,
+				9FDE149924D2FF0A006A1395 /* LaunchScreen.storyboard */,
+				9FDE149024D2FF09006A1395 /* SceneDelegate.swift */,
+			);
+			name = Files;
+			sourceTree = "<group>";
+		};
+		9FFAE6C124D6DF3C00968EB3 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				9FDE14A224D3044E006A1395 /* Capital.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		9FFAE6C224D6DF4700968EB3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9F6124D924D6062500B75FA3 /* ExtensionViewController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9FFAE6C324D6DF5A00968EB3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9FDE149224D2FF09006A1395 /* ViewController.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9FFAE6C424D6DF6100968EB3 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				9FDE149424D2FF09006A1395 /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +193,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FDE149324D2FF09006A1395 /* ViewController.swift in Sources */,
+				9F6124DA24D6062500B75FA3 /* ExtensionViewController.swift in Sources */,
 				9FDE148F24D2FF09006A1395 /* AppDelegate.swift in Sources */,
+				9FDE14A324D3044E006A1395 /* Capital.swift in Sources */,
 				9FDE149124D2FF09006A1395 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,7 +342,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W64W8UKVB6;
-				INFOPLIST_FILE = Hacking100/Info.plist;
+				INFOPLIST_FILE = Hacking100/AppFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +360,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W64W8UKVB6;
-				INFOPLIST_FILE = Hacking100/Info.plist;
+				INFOPLIST_FILE = Hacking100/AppFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
