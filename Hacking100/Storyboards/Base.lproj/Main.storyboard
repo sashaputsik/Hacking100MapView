@@ -31,19 +31,25 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VXU-ll-Mk6">
-                                        <rect key="frame" x="10" y="42" width="357" height="26"/>
+                                        <rect key="frame" x="10" y="42" width="282" height="26"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JqI-rM-oPW">
-                                        <rect key="frame" x="10" y="76" width="357" height="38"/>
+                                        <rect key="frame" x="10" y="84" width="357" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbC-2E-uV8">
+                                        <rect key="frame" x="300" y="39" width="44" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.92364996669999999" green="0.1263131797" blue="0.54539424179999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="phone.png"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.98845094440000003" green="0.97655659910000003" blue="0.97213059660000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -72,6 +78,7 @@
                         <outlet property="infoView" destination="X11-F9-Ovg" id="QQ4-ZQ-pRT"/>
                         <outlet property="jobTimeIntervalLabel" destination="VXU-ll-Mk6" id="9MW-nl-Lee"/>
                         <outlet property="mapView" destination="QCR-jb-IY2" id="ExN-fZ-BiI"/>
+                        <outlet property="phoneNumberButton" destination="RbC-2E-uV8" id="oTd-Jn-FlF"/>
                         <outlet property="searchBar" destination="AXF-M7-l4e" id="ISH-dq-wwu"/>
                     </connections>
                 </viewController>
@@ -80,4 +87,7 @@
             <point key="canvasLocation" x="1071.2" y="112.89355322338831"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="phone.png" width="24" height="24"/>
+    </resources>
 </document>
