@@ -15,6 +15,7 @@ class Wildberries: NSObject, MKAnnotation {
         self.address = address
         self.jobTimeInterval = jobTimeInterval
         self.info = info
+
     }
 }
 

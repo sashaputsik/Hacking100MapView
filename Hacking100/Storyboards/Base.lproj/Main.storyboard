@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lr3-uz-2va">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="QCR-jb-IY2">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="tintColor" red="0.92364996669999999" green="0.1263131797" blue="0.54539424179999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </mapView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X11-F9-Ovg">
@@ -45,15 +45,23 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.89410316780821919" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.98845094440000003" green="0.97655659910000003" blue="0.97213059660000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="AXF-M7-l4e">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="QCR-jb-IY2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0q2-4H-FWz"/>
                             <constraint firstItem="QCR-jb-IY2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5u0-Wc-sJR"/>
                             <constraint firstItem="QCR-jb-IY2" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="6bH-6m-vgr"/>
+                            <constraint firstItem="AXF-M7-l4e" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Xbe-fI-EXf"/>
                             <constraint firstItem="QCR-jb-IY2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Xoc-fx-mxj"/>
+                            <constraint firstItem="AXF-M7-l4e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ka0-SW-tk1"/>
+                            <constraint firstItem="AXF-M7-l4e" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="z0J-mJ-bUz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -64,29 +72,12 @@
                         <outlet property="infoView" destination="X11-F9-Ovg" id="QQ4-ZQ-pRT"/>
                         <outlet property="jobTimeIntervalLabel" destination="VXU-ll-Mk6" id="9MW-nl-Lee"/>
                         <outlet property="mapView" destination="QCR-jb-IY2" id="ExN-fZ-BiI"/>
+                        <outlet property="searchBar" destination="AXF-M7-l4e" id="ISH-dq-wwu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1071.2" y="112.89355322338831"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="6fa-2V-RZV">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lr3-uz-2va" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CCc-BW-VPu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ghD-WS-FGM"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8eo-pa-nKy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="132" y="112.89355322338831"/>
         </scene>
     </scenes>
 </document>

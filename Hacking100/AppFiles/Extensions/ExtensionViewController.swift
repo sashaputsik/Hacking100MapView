@@ -6,6 +6,7 @@ extension ViewController{
         let moskovskay = Wildberries(title: "Пункт выдачи", coordinate: CLLocationCoordinate2D(latitude: 52.102261, longitude:  23.781549), address: "Московская 301", jobTimeInterval: "Рабочие часы: 10:00-20:00", info: "Пункт выдачи отправлений и покупок")
         let bogdanovicha = Wildberries(title: "Пункт выдачи", coordinate: CLLocationCoordinate2D(latitude: 52.092078,  longitude: 23.767597), address: "Богдановича 124", jobTimeInterval: "Рабочие часы: 10:00-20:00", info: "Пункт выдачи отправлений и покупок")
         let oktabrskoyRevolucii = Wildberries(title: "Пункт самовывоза", coordinate: CLLocationCoordinate2D(latitude: 52.080852, longitude: 23.745083), address: "Октябрьской революции 7а", jobTimeInterval: "Рабочие часы: 10:00-20:00", info: "Пункт выдачи отправлений и покупок")
+        
         mapView.addAnnotations([partizanskiy, moskovskay, bogdanovicha, oktabrskoyRevolucii])
     }
     func frameAndLayer(){
