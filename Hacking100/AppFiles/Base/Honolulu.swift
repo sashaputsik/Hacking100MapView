@@ -33,7 +33,7 @@ class Honolulu: NSObject, MKAnnotation {
     var imageFile: String
     var objectId: String
     var title:String?
-    
+    var location: String
     init(dictionary: [String: Any], coordinate: CLLocationCoordinate2D){
         self.coordinate = coordinate
         self.creator = dictionary["creator"] as? String ?? ""
@@ -43,6 +43,6 @@ class Honolulu: NSObject, MKAnnotation {
         self.imageFile = dictionary["imagefile"] as? String ?? ""
         self.objectId = dictionary["objectid"] as? String ?? ""
         self.title = dictionary["title"] as? String ?? ""
-        
+        self.location = dictionary["location"] as? String ?? ""
     }
 }
