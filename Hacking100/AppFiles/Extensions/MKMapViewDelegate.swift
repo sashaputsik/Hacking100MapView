@@ -34,7 +34,6 @@ extension MapViewController: MKMapViewDelegate{
         for annotation in annotations{
             UIView.animate(withDuration: 0.3){
                 self.mapView.deselectAnnotation(annotation, animated: true)
-               
             }
         }
     }

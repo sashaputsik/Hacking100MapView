@@ -25,5 +25,10 @@ class MapViewController: UIViewController {
             self.placeInfoView.frame = CGRect(x: 16, y: 800, width: 343, height: 214)
         }
     }
+    @IBAction func closeInfoView(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.3) {
+            self.placeInfoView.frame = CGRect(x: 16, y: 800, width: 343, height: 214)
+        }
+    }
     
 }
