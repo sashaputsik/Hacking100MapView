@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F384AFE24DC3E8B001F159B /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F384AFD24DC3E8B001F159B /* pin.png */; };
 		9F8D96BF24DADC8A00526B57 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8D96BE24DADC8A00526B57 /* MapViewController.swift */; };
 		9F8D96C124DAE43C00526B57 /* Honolulu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8D96C024DAE43C00526B57 /* Honolulu.swift */; };
 		9F8D96C324DB3FC000526B57 /* MapViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8D96C224DB3FC000526B57 /* MapViewControllerExtension.swift */; };
 		9F8D96C524DB3FE300526B57 /* MKMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8D96C424DB3FE300526B57 /* MKMapViewDelegate.swift */; };
-		9F8D96C724DB464000526B57 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8D96C624DB464000526B57 /* InfoViewController.swift */; };
 		9FDE148F24D2FF09006A1395 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDE148E24D2FF09006A1395 /* AppDelegate.swift */; };
 		9FDE149124D2FF09006A1395 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDE149024D2FF09006A1395 /* SceneDelegate.swift */; };
 		9FDE149624D2FF09006A1395 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FDE149424D2FF09006A1395 /* Main.storyboard */; };
@@ -20,11 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F384AFD24DC3E8B001F159B /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
 		9F8D96BE24DADC8A00526B57 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		9F8D96C024DAE43C00526B57 /* Honolulu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Honolulu.swift; sourceTree = "<group>"; };
 		9F8D96C224DB3FC000526B57 /* MapViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerExtension.swift; sourceTree = "<group>"; };
 		9F8D96C424DB3FE300526B57 /* MKMapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapViewDelegate.swift; sourceTree = "<group>"; };
-		9F8D96C624DB464000526B57 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		9FDE148B24D2FF09006A1395 /* Hacking100.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hacking100.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FDE148E24D2FF09006A1395 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FDE149024D2FF09006A1395 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				9FDE148E24D2FF09006A1395 /* AppDelegate.swift */,
+				9F384AFD24DC3E8B001F159B /* pin.png */,
 				9FDE149724D2FF0A006A1395 /* Assets.xcassets */,
 				9FDE149C24D2FF0A006A1395 /* Info.plist */,
 				9FDE149924D2FF0A006A1395 /* LaunchScreen.storyboard */,
@@ -114,7 +115,6 @@
 			isa = PBXGroup;
 			children = (
 				9F8D96BE24DADC8A00526B57 /* MapViewController.swift */,
-				9F8D96C624DB464000526B57 /* InfoViewController.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -186,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FDE149B24D2FF0A006A1395 /* LaunchScreen.storyboard in Resources */,
+				9F384AFE24DC3E8B001F159B /* pin.png in Resources */,
 				9FDE149824D2FF0A006A1395 /* Assets.xcassets in Resources */,
 				9FDE149624D2FF09006A1395 /* Main.storyboard in Resources */,
 			);
@@ -201,7 +202,6 @@
 				9F8D96C524DB3FE300526B57 /* MKMapViewDelegate.swift in Sources */,
 				9FDE148F24D2FF09006A1395 /* AppDelegate.swift in Sources */,
 				9F8D96BF24DADC8A00526B57 /* MapViewController.swift in Sources */,
-				9F8D96C724DB464000526B57 /* InfoViewController.swift in Sources */,
 				9F8D96C124DAE43C00526B57 /* Honolulu.swift in Sources */,
 				9F8D96C324DB3FC000526B57 /* MapViewControllerExtension.swift in Sources */,
 				9FDE149124D2FF09006A1395 /* SceneDelegate.swift in Sources */,

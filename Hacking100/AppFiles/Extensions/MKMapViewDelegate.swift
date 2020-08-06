@@ -10,6 +10,7 @@ extension MapViewController: MKMapViewDelegate{
             annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "cell")
             annotationView?.canShowCallout = true
             let infoButton = UIButton(type: .infoLight)
+            infoButton.tintColor = .systemRed
             annotationView?.leftCalloutAccessoryView = infoButton
         }
         else{
@@ -19,20 +20,22 @@ extension MapViewController: MKMapViewDelegate{
     }
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         guard let place = view.annotation as? Honolulu else{return}
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "Info") as? InfoViewController else{return}
-        if let title = place.title {
-            vc.placeTitle = title
-            vc.creator = place.creator
-            vc.descriptionInfo = place.descriptionInfo
-            vc.discipline = place.discipline
-            vc.location = place.location
+        mapView.setCenter(place.coordinate, animated: true)
+        UIView.animate(withDuration: 0.3) {
+            self.placeInfoView.frame = CGRect(x: 16, y: 433, width: 343, height: 214)
         }
-        showDetailViewController(vc, sender: nil)
+        placeTitleLabel.text = place.title
+        placeLocationLabel.text = place.location
+        placeDisciplineLabel.text = place.discipline
+        placeDescriptionTextView.text = place.descriptionInfo
     }
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         let annotations = mapView.selectedAnnotations
         for annotation in annotations{
-            mapView.deselectAnnotation(annotation, animated: true)
+            UIView.animate(withDuration: 0.3){
+                self.mapView.deselectAnnotation(annotation, animated: true)
+               
+            }
         }
     }
 }
