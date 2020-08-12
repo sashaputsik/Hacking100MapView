@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9F384AFE24DC3E8B001F159B /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F384AFD24DC3E8B001F159B /* pin.png */; };
+		9F4CB32C24E434B9000C50E5 /* SearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4CB32B24E434B9000C50E5 /* SearchBarDelegate.swift */; };
+		9F4CB32E24E4420B000C50E5 /* TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4CB32D24E4420B000C50E5 /* TableViewDelegate.swift */; };
 		9F8D96BF24DADC8A00526B57 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8D96BE24DADC8A00526B57 /* MapViewController.swift */; };
 		9F8D96C124DAE43C00526B57 /* Honolulu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8D96C024DAE43C00526B57 /* Honolulu.swift */; };
 		9F8D96C324DB3FC000526B57 /* MapViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8D96C224DB3FC000526B57 /* MapViewControllerExtension.swift */; };
@@ -21,6 +23,8 @@
 
 /* Begin PBXFileReference section */
 		9F384AFD24DC3E8B001F159B /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
+		9F4CB32B24E434B9000C50E5 /* SearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarDelegate.swift; sourceTree = "<group>"; };
+		9F4CB32D24E4420B000C50E5 /* TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDelegate.swift; sourceTree = "<group>"; };
 		9F8D96BE24DADC8A00526B57 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		9F8D96C024DAE43C00526B57 /* Honolulu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Honolulu.swift; sourceTree = "<group>"; };
 		9F8D96C224DB3FC000526B57 /* MapViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerExtension.swift; sourceTree = "<group>"; };
@@ -107,6 +111,8 @@
 			children = (
 				9F8D96C224DB3FC000526B57 /* MapViewControllerExtension.swift */,
 				9F8D96C424DB3FE300526B57 /* MKMapViewDelegate.swift */,
+				9F4CB32B24E434B9000C50E5 /* SearchBarDelegate.swift */,
+				9F4CB32D24E4420B000C50E5 /* TableViewDelegate.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -199,11 +205,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F4CB32E24E4420B000C50E5 /* TableViewDelegate.swift in Sources */,
 				9F8D96C524DB3FE300526B57 /* MKMapViewDelegate.swift in Sources */,
 				9FDE148F24D2FF09006A1395 /* AppDelegate.swift in Sources */,
 				9F8D96BF24DADC8A00526B57 /* MapViewController.swift in Sources */,
 				9F8D96C124DAE43C00526B57 /* Honolulu.swift in Sources */,
 				9F8D96C324DB3FC000526B57 /* MapViewControllerExtension.swift in Sources */,
+				9F4CB32C24E434B9000C50E5 /* SearchBarDelegate.swift in Sources */,
 				9FDE149124D2FF09006A1395 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

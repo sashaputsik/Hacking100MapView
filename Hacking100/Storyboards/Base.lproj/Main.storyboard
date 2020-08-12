@@ -89,15 +89,37 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sEx-PL-zbK">
+                                <rect key="frame" x="0.0" y="56" width="375" height="141"/>
+                                <color key="backgroundColor" white="1" alpha="0.75" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="xMp-XX-Wsm">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xMp-XX-Wsm" id="CkD-xb-XcL">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="1" alpha="0.75" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="0.53312285958904104" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="sEx-PL-zbK" firstAttribute="trailing" secondItem="tYA-IE-WNb" secondAttribute="trailing" id="5pb-E7-q18"/>
                             <constraint firstItem="tYA-IE-WNb" firstAttribute="trailing" secondItem="o0E-0y-Vr1" secondAttribute="trailing" constant="16" id="9yW-eq-MQi"/>
                             <constraint firstItem="MYf-Fd-LEe" firstAttribute="trailing" secondItem="tYA-IE-WNb" secondAttribute="trailing" id="Bm7-JZ-NQT"/>
+                            <constraint firstItem="sEx-PL-zbK" firstAttribute="leading" secondItem="tYA-IE-WNb" secondAttribute="leading" id="GOM-53-YBu"/>
+                            <constraint firstItem="tYA-IE-WNb" firstAttribute="bottom" secondItem="sEx-PL-zbK" secondAttribute="bottom" constant="470" id="WM0-Iy-fD8"/>
                             <constraint firstItem="3VH-wF-BHO" firstAttribute="top" secondItem="tYA-IE-WNb" secondAttribute="top" id="XLf-u8-moM"/>
                             <constraint firstItem="o0E-0y-Vr1" firstAttribute="leading" secondItem="tYA-IE-WNb" secondAttribute="leading" constant="16" id="a1U-gq-mtJ"/>
                             <constraint firstItem="MYf-Fd-LEe" firstAttribute="top" secondItem="3VH-wF-BHO" secondAttribute="bottom" id="d4p-GC-yKe"/>
                             <constraint firstItem="3VH-wF-BHO" firstAttribute="leading" secondItem="tYA-IE-WNb" secondAttribute="leading" id="dF3-l8-Of4"/>
+                            <constraint firstItem="sEx-PL-zbK" firstAttribute="top" secondItem="3VH-wF-BHO" secondAttribute="bottom" id="eNd-bJ-Qb7"/>
                             <constraint firstItem="MYf-Fd-LEe" firstAttribute="bottom" secondItem="tYA-IE-WNb" secondAttribute="bottom" id="gih-Tm-rRv"/>
                             <constraint firstItem="MYf-Fd-LEe" firstAttribute="leading" secondItem="tYA-IE-WNb" secondAttribute="leading" id="irw-cc-L1U"/>
                             <constraint firstItem="tYA-IE-WNb" firstAttribute="bottom" secondItem="o0E-0y-Vr1" secondAttribute="bottom" constant="20" id="lZD-5J-0Ab"/>
@@ -114,8 +136,9 @@
                         <outlet property="placeInfoView" destination="o0E-0y-Vr1" id="2I3-Pf-B1n"/>
                         <outlet property="placeInfoViewHieght" destination="UrU-eI-dw4" id="YYD-4Y-VDJ"/>
                         <outlet property="placeLocationLabel" destination="gvJ-5V-Dfs" id="jRP-Ms-5hx"/>
-                        <outlet property="placeSeearchBar" destination="3VH-wF-BHO" id="mY3-oJ-gRs"/>
+                        <outlet property="placeSearchBar" destination="3VH-wF-BHO" id="mY3-oJ-gRs"/>
                         <outlet property="placeTitleLabel" destination="lpF-ij-Grs" id="7Bv-rI-fLZ"/>
+                        <outlet property="searchPlaceTableView" destination="sEx-PL-zbK" id="yUw-a2-9I1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4gB-jK-KMU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

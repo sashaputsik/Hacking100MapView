@@ -1,29 +1,8 @@
 import Foundation
 import MapKit
-//{
-//    ":@computed_region_7asa_3qps" = 6861;
-//    access = Full;
-//    artloc =         {
-//        coordinates =             (
-//            "-157.85167",
-//            "21.304179"
-//        );
-//        type = Point;
-//    };
-//    creator = "Sandy Vitarelli";
-//    credit = "City and County of Honolulu Purchase";
-//    description = "A large ceramic urn from the artist's Land Series depicting taro with a prawn motif border. Located at the Alapai Police Station.";
-//    discipline = "Urn, Garden";
-//    imagefile = "http://hiculturearts.pastperfect-online.com/34250images/002/19920502e.JPG";
-//    latitude = "21.304179";
-//    location = "Alapai Police Station 2nd Floor Ewa Parapet";
-//    longitude = "-157.85167";
-//    objectid = "1992.05.02e";
-//    title = "Mountain-LAND & SEA \"Taro\"";
-//}
 
-var honoluluObject = [Honolulu]()
-
+var honoluluPlace = [String]()
+var searchingPlace = [String]()
 class Honolulu: NSObject, MKAnnotation {
     var coordinate: CLLocationCoordinate2D
     var creator: String

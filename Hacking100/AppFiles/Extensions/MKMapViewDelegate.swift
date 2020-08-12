@@ -24,11 +24,9 @@ extension MapViewController: MKMapViewDelegate{
         mapView.setCenter(place.coordinate, animated: true)
         let region = MKCoordinateRegion(center: place.coordinate, latitudinalMeters: 1500, longitudinalMeters: 1500)
         mapView.setRegion(region, animated: true)
-        UIView.animate(withDuration: 0.3) {
-            self.placeInfoViewHieght.constant = 214
-            self.placeInfoView.layoutIfNeeded()
-            self.hiddenInfoView(of: false)
-        }
+        placeInfoViewHieght.constant = 214
+        placeInfoView.layoutIfNeeded()
+        hiddenInfoView(of: false)
         placeTitleLabel.text = place.title
         placeLocationLabel.text = place.location
         placeDisciplineLabel.text = place.discipline

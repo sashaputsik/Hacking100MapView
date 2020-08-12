@@ -17,7 +17,8 @@ extension MapViewController{
                                 self.mapView.setRegion(region, animated: true)
                                 self.mapView.addAnnotation(annotationMap)
                             }
-                            print(annotationMap)
+                            guard let title = annotation["title"] as? String else{return}
+                            honoluluPlace.append(title)
                         }
                     }
                 }
