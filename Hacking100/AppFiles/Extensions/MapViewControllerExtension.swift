@@ -28,4 +28,11 @@ extension MapViewController{
         placeInfoView.layer.shadowOffset = CGSize(width: 1, height: 1)
         placeInfoView.layer.shadowOpacity = 0.4
     }
+    func hiddenInfoView(of hidden: Bool){
+        self.placeTitleLabel.isHidden = hidden
+        self.placeDisciplineLabel.isHidden = hidden
+        self.placeDescriptionTextView.isHidden = hidden
+        self.placeLocationLabel.isHidden = hidden
+        self.locationImageView.isHidden = hidden
+    }
 }

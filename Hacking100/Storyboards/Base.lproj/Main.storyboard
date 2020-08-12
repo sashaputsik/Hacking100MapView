@@ -15,72 +15,106 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="MYf-Fd-LEe">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="MYf-Fd-LEe">
+                                <rect key="frame" x="0.0" y="56" width="375" height="611"/>
                             </mapView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o0E-0y-Vr1">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o0E-0y-Vr1">
                                 <rect key="frame" x="16" y="433" width="343" height="214"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Brodway street" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gvJ-5V-Dfs">
-                                        <rect key="frame" x="32" y="8" width="277" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brodway street" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gvJ-5V-Dfs">
+                                        <rect key="frame" x="32" y="10" width="277" height="15"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="277" id="DWo-Vw-b0Q"/>
+                                            <constraint firstAttribute="height" constant="15" id="dRd-JT-Leu"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Manufacture festival" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpF-ij-Grs">
-                                        <rect key="frame" x="8" y="37" width="327" height="39"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manufacture festival" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpF-ij-Grs">
+                                        <rect key="frame" x="8" y="42" width="327" height="17.5"/>
                                         <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pin.png" translatesAutoresizingMaskIntoConstraints="NO" id="lgv-sO-8DX">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="pin.png" translatesAutoresizingMaskIntoConstraints="NO" id="lgv-sO-8DX">
                                         <rect key="frame" x="8" y="10" width="16" height="16"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Oh9-47-SAi">
-                                        <rect key="frame" x="8" y="102" width="327" height="104"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Oh9-47-SAi">
+                                        <rect key="frame" x="8" y="94.5" width="327" height="111.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5a-7V-uWL">
-                                        <rect key="frame" x="310" y="7" width="20" height="22"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5a-7V-uWL">
+                                        <rect key="frame" x="315" y="10" width="20" height="22"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" image="clear" catalog="system">
                                             <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
-                                        <connections>
-                                            <action selector="closeInfoView:" destination="hHE-OP-UGs" eventType="touchUpInside" id="OtS-ae-7JQ"/>
-                                        </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sculpture" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSn-bG-zvH">
-                                        <rect key="frame" x="8" y="73" width="327" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sculpture" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSn-bG-zvH">
+                                        <rect key="frame" x="8" y="69.5" width="327" height="15"/>
                                         <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="Oh9-47-SAi" firstAttribute="top" secondItem="cSn-bG-zvH" secondAttribute="bottom" constant="10" id="3ot-EZ-e3X"/>
+                                    <constraint firstItem="lgv-sO-8DX" firstAttribute="top" secondItem="o0E-0y-Vr1" secondAttribute="top" constant="10" id="6As-no-Gjx"/>
+                                    <constraint firstAttribute="trailing" secondItem="A5a-7V-uWL" secondAttribute="trailing" constant="8" id="8LP-xJ-dGN"/>
+                                    <constraint firstItem="gvJ-5V-Dfs" firstAttribute="leading" secondItem="lgv-sO-8DX" secondAttribute="trailing" constant="8" id="Aux-i3-A9j"/>
+                                    <constraint firstItem="A5a-7V-uWL" firstAttribute="top" secondItem="lgv-sO-8DX" secondAttribute="top" id="BZ5-Mx-hF2"/>
+                                    <constraint firstItem="A5a-7V-uWL" firstAttribute="top" secondItem="o0E-0y-Vr1" secondAttribute="top" constant="10" id="Ccu-e0-CIR"/>
+                                    <constraint firstItem="cSn-bG-zvH" firstAttribute="top" secondItem="lpF-ij-Grs" secondAttribute="bottom" constant="10" id="I9e-Ac-zhH"/>
+                                    <constraint firstItem="lgv-sO-8DX" firstAttribute="leading" secondItem="o0E-0y-Vr1" secondAttribute="leading" constant="8" id="OFb-BT-xgf"/>
+                                    <constraint firstAttribute="trailing" secondItem="lpF-ij-Grs" secondAttribute="trailing" constant="8" id="TrJ-Bq-F2F"/>
+                                    <constraint firstAttribute="height" constant="214" id="UrU-eI-dw4"/>
+                                    <constraint firstItem="cSn-bG-zvH" firstAttribute="leading" secondItem="o0E-0y-Vr1" secondAttribute="leading" constant="8" id="YiP-3V-rYU"/>
+                                    <constraint firstAttribute="bottom" secondItem="Oh9-47-SAi" secondAttribute="bottom" constant="8" id="ZZB-aE-I7Q"/>
+                                    <constraint firstAttribute="trailing" secondItem="cSn-bG-zvH" secondAttribute="trailing" constant="8" id="aId-XF-7Ea"/>
+                                    <constraint firstAttribute="trailing" secondItem="Oh9-47-SAi" secondAttribute="trailing" constant="8" id="g7V-gR-avO"/>
+                                    <constraint firstItem="lpF-ij-Grs" firstAttribute="top" secondItem="A5a-7V-uWL" secondAttribute="bottom" constant="10" id="kU9-UZ-AjM"/>
+                                    <constraint firstItem="lpF-ij-Grs" firstAttribute="leading" secondItem="o0E-0y-Vr1" secondAttribute="leading" constant="8" id="l67-mw-nd5"/>
+                                    <constraint firstItem="gvJ-5V-Dfs" firstAttribute="top" secondItem="lgv-sO-8DX" secondAttribute="top" id="oh3-Pr-jEl"/>
+                                    <constraint firstItem="A5a-7V-uWL" firstAttribute="leading" secondItem="gvJ-5V-Dfs" secondAttribute="trailing" constant="6" id="qLy-LJ-cOE"/>
+                                    <constraint firstItem="Oh9-47-SAi" firstAttribute="leading" secondItem="o0E-0y-Vr1" secondAttribute="leading" constant="8" id="xox-wp-tKT"/>
+                                </constraints>
                             </view>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="3VH-wF-BHO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="tYA-IE-WNb" firstAttribute="trailing" secondItem="o0E-0y-Vr1" secondAttribute="trailing" constant="16" id="9yW-eq-MQi"/>
+                            <constraint firstItem="MYf-Fd-LEe" firstAttribute="trailing" secondItem="tYA-IE-WNb" secondAttribute="trailing" id="Bm7-JZ-NQT"/>
+                            <constraint firstItem="3VH-wF-BHO" firstAttribute="top" secondItem="tYA-IE-WNb" secondAttribute="top" id="XLf-u8-moM"/>
+                            <constraint firstItem="o0E-0y-Vr1" firstAttribute="leading" secondItem="tYA-IE-WNb" secondAttribute="leading" constant="16" id="a1U-gq-mtJ"/>
+                            <constraint firstItem="MYf-Fd-LEe" firstAttribute="top" secondItem="3VH-wF-BHO" secondAttribute="bottom" id="d4p-GC-yKe"/>
+                            <constraint firstItem="3VH-wF-BHO" firstAttribute="leading" secondItem="tYA-IE-WNb" secondAttribute="leading" id="dF3-l8-Of4"/>
+                            <constraint firstItem="MYf-Fd-LEe" firstAttribute="bottom" secondItem="tYA-IE-WNb" secondAttribute="bottom" id="gih-Tm-rRv"/>
+                            <constraint firstItem="MYf-Fd-LEe" firstAttribute="leading" secondItem="tYA-IE-WNb" secondAttribute="leading" id="irw-cc-L1U"/>
+                            <constraint firstItem="tYA-IE-WNb" firstAttribute="bottom" secondItem="o0E-0y-Vr1" secondAttribute="bottom" constant="20" id="lZD-5J-0Ab"/>
+                            <constraint firstItem="3VH-wF-BHO" firstAttribute="trailing" secondItem="tYA-IE-WNb" secondAttribute="trailing" id="uKP-pZ-Nph"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="tYA-IE-WNb"/>
                     </view>
                     <connections>
+                        <outlet property="closeInfoViewButton" destination="A5a-7V-uWL" id="tdo-wr-qYS"/>
+                        <outlet property="locationImageView" destination="lgv-sO-8DX" id="LFS-iq-JzW"/>
                         <outlet property="mapView" destination="MYf-Fd-LEe" id="54P-tU-TuJ"/>
                         <outlet property="placeDescriptionTextView" destination="Oh9-47-SAi" id="BI1-iK-EPa"/>
                         <outlet property="placeDisciplineLabel" destination="cSn-bG-zvH" id="jXU-l1-Pbt"/>
                         <outlet property="placeInfoView" destination="o0E-0y-Vr1" id="2I3-Pf-B1n"/>
+                        <outlet property="placeInfoViewHieght" destination="UrU-eI-dw4" id="YYD-4Y-VDJ"/>
                         <outlet property="placeLocationLabel" destination="gvJ-5V-Dfs" id="jRP-Ms-5hx"/>
+                        <outlet property="placeSeearchBar" destination="3VH-wF-BHO" id="mY3-oJ-gRs"/>
                         <outlet property="placeTitleLabel" destination="lpF-ij-Grs" id="7Bv-rI-fLZ"/>
                     </connections>
                 </viewController>
