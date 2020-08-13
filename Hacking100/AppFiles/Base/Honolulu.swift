@@ -13,7 +13,8 @@ class Honolulu: NSObject, MKAnnotation {
     var objectId: String
     var title:String?
     var location: String
-    init(dictionary: [String: Any], coordinate: CLLocationCoordinate2D){
+    init(dictionary: [String: Any],
+         coordinate: CLLocationCoordinate2D){
         self.coordinate = coordinate
         self.creator = dictionary["creator"] as? String ?? ""
         self.credit = dictionary["credit"] as? String ?? ""

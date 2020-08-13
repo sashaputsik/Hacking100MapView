@@ -3,12 +3,13 @@ import MapKit
 import UIKit
 
 extension MapViewController: MKMapViewDelegate{
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+    func mapView(_ mapView: MKMapView,
+                 viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         guard annotation is Honolulu else{return nil}
-      //  placeInfoView.frame = CGRect(x: 16, y: 800, width: 343, height: 214)
         var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "cell")
         if annotationView == nil{
-            annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "cell")
+            annotationView = MKMarkerAnnotationView(annotation: annotation,
+                                                    reuseIdentifier: "cell")
             annotationView?.canShowCallout = true
             let infoButton = UIButton(type: .infoLight)
             infoButton.tintColor = .systemRed
@@ -19,25 +20,36 @@ extension MapViewController: MKMapViewDelegate{
         }
         return annotationView
     }
-    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView,
+                 calloutAccessoryControlTapped control: UIControl) {
         guard let place = view.annotation as? Honolulu else{return}
         mapView.setCenter(place.coordinate, animated: true)
-        let region = MKCoordinateRegion(center: place.coordinate, latitudinalMeters: 1500, longitudinalMeters: 1500)
-        mapView.setRegion(region, animated: true)
+        let region = MKCoordinateRegion(center: place.coordinate,
+                                        latitudinalMeters: 1500,
+                                        longitudinalMeters: 1500)
+        mapView.setRegion(region,
+                          animated: true)
         placeInfoViewHieght.constant = 214
         placeInfoView.layoutIfNeeded()
         hiddenInfoView(of: false)
-        placeTitleLabel.text = place.title
-        placeLocationLabel.text = place.location
-        placeDisciplineLabel.text = place.discipline
-        placeDescriptionTextView.text = place.descriptionInfo
+        
+        setPlaceViewInformation(title: place.title,
+                                location: place.location,
+                                discipline: place.discipline,
+                                descriptionInfo: place.descriptionInfo)
     }
-    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-        let annotations = mapView.selectedAnnotations
-        for annotation in annotations{
-            UIView.animate(withDuration: 0.3){
-                mapView.deselectAnnotation(annotation, animated: true)
-            }
-        }
+    func mapViewDidFailLoadingMap(_ mapView: MKMapView,
+                                  withError error: Error) {
+        let alertController = UIAlertController(title: "Error",
+                                                message: error.localizedDescription,
+                                                preferredStyle: .alert)
+        let okeyAction = UIAlertAction(title: "Okey",
+                                       style: .default,
+                                       handler: nil)
+        alertController.addAction(okeyAction)
+        present(alertController,
+                animated: true,
+                completion: nil)
     }
+   
 }

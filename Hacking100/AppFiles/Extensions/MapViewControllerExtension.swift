@@ -8,13 +8,20 @@ extension MapViewController{
                let session = URLSession.shared
                session.dataTask(with: url) { (data, response, error) in
                    guard let data = data else{return}
-                   if let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]]{
+                   if let json = try? JSONSerialization.jsonObject(with: data,
+                                                                   options: []) as? [[String: Any]]{
                     for annotation in json{
                         if let lati = annotation["latitude"] as? NSString, let long = annotation["longitude"] as? NSString{
-                            let annotationMap = Honolulu(dictionary: annotation, coordinate: CLLocationCoordinate2D(latitude: lati.doubleValue, longitude: long.doubleValue))
-                            let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: lati.doubleValue, longitude: long.doubleValue), latitudinalMeters: 30000, longitudinalMeters: 30000)
+                            let annotationMap = Honolulu(dictionary: annotation,
+                                                         coordinate: CLLocationCoordinate2D(latitude: lati.doubleValue,
+                                                                                            longitude: long.doubleValue))
+                            let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: lati.doubleValue,
+                                                                                           longitude: long.doubleValue),
+                                                            latitudinalMeters: 30000,
+                                                            longitudinalMeters: 30000)
                             DispatchQueue.main.async {
-                                self.mapView.setRegion(region, animated: true)
+                                self.mapView.setRegion(region,
+                                                       animated: true)
                                 self.mapView.addAnnotation(annotationMap)
                             }
                             guard let title = annotation["title"] as? String else{return}
@@ -26,7 +33,8 @@ extension MapViewController{
     }
     func frameAndLayer(){
         placeInfoView.layer.cornerRadius = 10
-        placeInfoView.layer.shadowOffset = CGSize(width: 1, height: 1)
+        placeInfoView.layer.shadowOffset = CGSize(width: 1,
+                                                  height: 1)
         placeInfoView.layer.shadowOpacity = 0.4
     }
     func hiddenInfoView(of hidden: Bool){
@@ -35,5 +43,14 @@ extension MapViewController{
         self.placeDescriptionTextView.isHidden = hidden
         self.placeLocationLabel.isHidden = hidden
         self.locationImageView.isHidden = hidden
+    }
+    func setPlaceViewInformation(title: String?,
+                                 location: String,
+                                 discipline: String,
+                                 descriptionInfo: String){
+        placeTitleLabel.text = title
+        placeLocationLabel.text = location
+        placeDisciplineLabel.text = discipline
+        placeDescriptionTextView.text = descriptionInfo
     }
 }

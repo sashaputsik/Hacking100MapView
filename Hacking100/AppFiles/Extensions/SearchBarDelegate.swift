@@ -7,18 +7,23 @@ extension MapViewController: UISearchBarDelegate{
         for annotation in mapView.annotations{
             guard let annotationPlace = annotation as? Honolulu else{return}
             if searchBar.text == annotationPlace.title{
-                let region = MKCoordinateRegion(center: annotationPlace.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
-                mapView.setRegion(region, animated: true)
+                let region = MKCoordinateRegion(center: annotationPlace.coordinate,
+                                                latitudinalMeters: 1000,
+                                                longitudinalMeters: 1000)
+                mapView.setRegion(region,
+                                  animated: true)
             }
         }
         searchBar.endEditing(true)
         isSearching = false
         searchPlaceTableView.isHidden = true
+        searchBar.text = ""
     }
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchPlaceTableView.isHidden = false   
     }
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+    func searchBar(_ searchBar: UISearchBar,
+                   textDidChange searchText: String) {
         isSearching = true
         searchingPlace = honoluluPlace.filter({$0.contains(searchText)})
         searchPlaceTableView.reloadData()

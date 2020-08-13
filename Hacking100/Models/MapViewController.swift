@@ -30,8 +30,11 @@ class MapViewController: UIViewController{
         parseMap()
         print(honoluluPlace)
         frameAndLayer()
-        closeInfoViewButton.addTarget(self, action: #selector(close), for: .touchUpInside)
-        let closeInfoView = UISwipeGestureRecognizer(target: self, action: #selector(close))
+        closeInfoViewButton.addTarget(self,
+                                      action: #selector(close),
+                                      for: .touchUpInside)
+        let closeInfoView = UISwipeGestureRecognizer(target: self,
+                                                     action: #selector(close))
         closeInfoView.direction = .down
         placeInfoView.addGestureRecognizer(closeInfoView)
         if closeInfoViewButton.isSelected{
@@ -45,6 +48,10 @@ class MapViewController: UIViewController{
         placeInfoViewHieght.constant = 0
         hiddenInfoView(of: true)
         placeInfoView.layoutIfNeeded()
+        for annotation in mapView.selectedAnnotations{
+            mapView.deselectAnnotation(annotation,
+                                       animated: true)
+        }
     }
     
 }
