@@ -32,10 +32,18 @@ extension MapViewController{
                }.resume()
     }
     func frameAndLayer(){
-        placeInfoView.layer.cornerRadius = 10
+        placeInfoView.layer.cornerRadius = 5
         placeInfoView.layer.shadowOffset = CGSize(width: 1,
                                                   height: 1)
         placeInfoView.layer.shadowOpacity = 0.4
+        searchPlaceTableView.layer.cornerRadius = 10
+        searchButton.layer.shadowOpacity = 0.2
+        searchButton.layer.shadowOffset = CGSize(width: 1,
+                                                 height: 1)
+        searchButton.layer.cornerRadius = 10
+        searchButton.layer.shadowOffset = CGSize(width: 1,
+                                                 height: 1)
+        searchButton.layer.shadowOpacity = 0.3
     }
     func hiddenInfoView(of hidden: Bool){
         self.placeTitleLabel.isHidden = hidden
@@ -52,5 +60,11 @@ extension MapViewController{
         placeLocationLabel.text = location
         placeDisciplineLabel.text = discipline
         placeDescriptionTextView.text = descriptionInfo
+    }
+    func delegates(){
+        placeSearchBar.delegate = self
+        searchPlaceTableView.delegate = self
+        searchPlaceTableView.dataSource = self
+        mapView.delegate = self
     }
 }

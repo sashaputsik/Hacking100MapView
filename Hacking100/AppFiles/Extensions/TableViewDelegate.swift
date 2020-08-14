@@ -42,10 +42,8 @@ extension MapViewController: UITableViewDelegate, UITableViewDataSource{
                 let region = MKCoordinateRegion(center: selectedPlace.coordinate,
                                                 latitudinalMeters: 1500,
                                                 longitudinalMeters: 1500)
-                UIView.animate(withDuration: 0.3) {
+                UIView.animate(withDuration: 0.7) {
                     self.mapView.setRegion(region,
-                                           animated: true)
-                    self.mapView.setCenter(selectedPlace.coordinate,
                                            animated: true)
                     self.mapView.selectAnnotation(annotation,
                                                   animated: true)
@@ -56,11 +54,11 @@ extension MapViewController: UITableViewDelegate, UITableViewDataSource{
                                         descriptionInfo: selectedPlace.descriptionInfo)
             }
         }
+        placeInfoViewHieght.constant = 214
+        searchViewHieght.constant = 0
+        placeInfoView.layoutIfNeeded()
         placeSearchBar.endEditing(true)
         searchPlaceTableView.isHidden = true
         hiddenInfoView(of: false)
-        placeInfoViewHieght.constant = 214
-        placeInfoView.layoutIfNeeded()
-    }
-    
+    }    
 }

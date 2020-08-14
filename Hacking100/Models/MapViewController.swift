@@ -14,27 +14,34 @@ class MapViewController: UIViewController{
     @IBOutlet weak var closeInfoViewButton: UIButton!
     @IBOutlet weak var placeInfoViewHieght: NSLayoutConstraint!
     @IBOutlet weak var locationImageView: UIImageView!
-    @IBOutlet weak var placeSearchBar: UISearchBar!
     @IBOutlet weak var searchPlaceTableView: UITableView!
+    @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var searchView: UIView!
+    @IBOutlet weak var searchViewHieght: NSLayoutConstraint!
+    @IBOutlet weak var placeSearchBar: UISearchBar!
+    @IBOutlet weak var closePlaceSearchViewButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        placeSearchBar.autocapitalizationType = .words
-        searchPlaceTableView.isHidden = true
-        placeInfoViewHieght.constant = 0
-        hiddenInfoView(of: true)
-        mapView.delegate = self
-        placeSearchBar.delegate = self
-        searchPlaceTableView.delegate = self
-        searchPlaceTableView.dataSource = self
+        delegates()
         parseMap()
-        print(honoluluPlace)
         frameAndLayer()
+        hiddenInfoView(of: true)
+        placeInfoViewHieght.constant = 0
+        searchViewHieght.constant = 0
+        searchPlaceTableView.isHidden = true
+        searchPlaceTableView.keyboardDismissMode = .onDrag
+        searchButton.addTarget(self,
+                               action: #selector(openSearchView),
+                               for: .touchUpInside)
         closeInfoViewButton.addTarget(self,
-                                      action: #selector(close),
+                                      action: #selector(closePlaceInfoView),
                                       for: .touchUpInside)
+        closePlaceSearchViewButton.addTarget(self,
+                                             action: #selector(closeSearchPlaceView),
+                                             for: .touchUpInside)
         let closeInfoView = UISwipeGestureRecognizer(target: self,
-                                                     action: #selector(close))
+                                                     action: #selector(closePlaceInfoView))
         closeInfoView.direction = .down
         placeInfoView.addGestureRecognizer(closeInfoView)
         if closeInfoViewButton.isSelected{
@@ -44,7 +51,12 @@ class MapViewController: UIViewController{
             closeInfoViewButton.tintColor = .gray
         }
     }
-    @objc func close(){
+    @objc func openSearchView(){
+        searchViewHieght.constant = 500
+        searchPlaceTableView.reloadData()
+        searchPlaceTableView.isHidden = false
+    }
+    @objc func closePlaceInfoView(){
         placeInfoViewHieght.constant = 0
         hiddenInfoView(of: true)
         placeInfoView.layoutIfNeeded()
@@ -52,6 +64,11 @@ class MapViewController: UIViewController{
             mapView.deselectAnnotation(annotation,
                                        animated: true)
         }
+    }
+    @objc func closeSearchPlaceView(){
+        searchViewHieght.constant = 0
+        placeSearchBar.endEditing(true)
+        
     }
     
 }
