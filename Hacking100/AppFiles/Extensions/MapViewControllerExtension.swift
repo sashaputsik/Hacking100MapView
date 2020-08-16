@@ -1,7 +1,6 @@
 import Foundation
 import MapKit
 import UIKit
-
 extension MapViewController{
     func parseMap(){
         guard let url = URL(string: url) else{return}
@@ -32,18 +31,15 @@ extension MapViewController{
                }.resume()
     }
     func frameAndLayer(){
-        placeInfoView.layer.cornerRadius = 5
+        placeInfoView.layer.cornerRadius = 10
         placeInfoView.layer.shadowOffset = CGSize(width: 1,
                                                   height: 1)
-        placeInfoView.layer.shadowOpacity = 0.4
+        placeInfoView.layer.shadowOpacity = 0.5
         searchPlaceTableView.layer.cornerRadius = 10
-        searchButton.layer.shadowOpacity = 0.2
+        searchButton.layer.shadowOpacity = 0.4
         searchButton.layer.shadowOffset = CGSize(width: 1,
                                                  height: 1)
         searchButton.layer.cornerRadius = 10
-        searchButton.layer.shadowOffset = CGSize(width: 1,
-                                                 height: 1)
-        searchButton.layer.shadowOpacity = 0.3
     }
     func hiddenInfoView(of hidden: Bool){
         self.placeTitleLabel.isHidden = hidden
@@ -66,5 +62,16 @@ extension MapViewController{
         searchPlaceTableView.delegate = self
         searchPlaceTableView.dataSource = self
         mapView.delegate = self
+    }
+    func targets(){
+        searchButton.addTarget(self,
+                               action: #selector(openSearchView),
+                               for: .touchUpInside)
+        closeInfoViewButton.addTarget(self,
+                                      action: #selector(closePlaceInfoView),
+                                      for: .touchUpInside)
+        closePlaceSearchViewButton.addTarget(self,
+                                             action: #selector(closeSearchPlaceView),
+                                             for: .touchUpInside)
     }
 }

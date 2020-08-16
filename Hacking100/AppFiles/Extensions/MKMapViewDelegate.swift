@@ -51,5 +51,10 @@ extension MapViewController: MKMapViewDelegate{
                 animated: true,
                 completion: nil)
     }
+    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+        searchViewHieght.constant = 0
+        placeSearchBar.endEditing(true)
+        
+    }
    
 }

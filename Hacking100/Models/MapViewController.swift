@@ -26,20 +26,12 @@ class MapViewController: UIViewController{
         delegates()
         parseMap()
         frameAndLayer()
+        targets()
         hiddenInfoView(of: true)
         placeInfoViewHieght.constant = 0
         searchViewHieght.constant = 0
         searchPlaceTableView.isHidden = true
         searchPlaceTableView.keyboardDismissMode = .onDrag
-        searchButton.addTarget(self,
-                               action: #selector(openSearchView),
-                               for: .touchUpInside)
-        closeInfoViewButton.addTarget(self,
-                                      action: #selector(closePlaceInfoView),
-                                      for: .touchUpInside)
-        closePlaceSearchViewButton.addTarget(self,
-                                             action: #selector(closeSearchPlaceView),
-                                             for: .touchUpInside)
         let closeInfoView = UISwipeGestureRecognizer(target: self,
                                                      action: #selector(closePlaceInfoView))
         closeInfoView.direction = .down
@@ -55,6 +47,7 @@ class MapViewController: UIViewController{
         searchViewHieght.constant = 500
         searchPlaceTableView.reloadData()
         searchPlaceTableView.isHidden = false
+        closePlaceInfoView()
     }
     @objc func closePlaceInfoView(){
         placeInfoViewHieght.constant = 0
@@ -68,7 +61,7 @@ class MapViewController: UIViewController{
     @objc func closeSearchPlaceView(){
         searchViewHieght.constant = 0
         placeSearchBar.endEditing(true)
-        
+        placeSearchBar.text = ""
     }
     
 }
