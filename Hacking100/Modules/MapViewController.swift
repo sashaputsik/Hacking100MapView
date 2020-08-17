@@ -1,11 +1,10 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController{
+ final class MapViewController: UIViewController{
     let url = "https://data.honolulu.gov/resource/yef5-h88r.json"
-    let coordination = CLLocationCoordinate2D()
     var isSearching = false
-    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet private(set) var mapView: MKMapView!
     @IBOutlet weak var placeTitleLabel: UILabel!
     @IBOutlet weak var placeInfoView: UIView!
     @IBOutlet weak var placeLocationLabel: UILabel!
@@ -23,11 +22,26 @@ class MapViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        delegates()
-        parseMap()
+        ParsingMap().parseMap(of: url) { (annotation) in
+            if  let lati = annotation[DTOKeys.latitude.rawValue] as? NSString,
+                let long = annotation[DTOKeys.longitude.rawValue] as? NSString{
+            let annotationMap = Honolulu(dictionary: annotation,
+                                         coordinate: CLLocationCoordinate2D(latitude: lati.doubleValue,
+                                                                            longitude: long.doubleValue))
+            let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: lati.doubleValue,
+                                                                           longitude: long.doubleValue),
+                                            latitudinalMeters: 30000,
+                                            longitudinalMeters: 30000)
+            DispatchQueue.main.async {
+                self.mapView.setRegion(region,
+                                       animated: true)
+                self.mapView.addAnnotation(annotationMap)
+                }
+            }
+        }
+        
         frameAndLayer()
-        targets()
-        hiddenInfoView(of: true)
+        setInfoView(isHidden: true)
         placeInfoViewHieght.constant = 0
         searchViewHieght.constant = 0
         searchPlaceTableView.isHidden = true
@@ -42,22 +56,36 @@ class MapViewController: UIViewController{
         else{
             closeInfoViewButton.tintColor = .gray
         }
+        searchButton.addTarget(self,
+                               action: #selector(openSearchView),
+                               for: .touchUpInside)
+        closeInfoViewButton.addTarget(self,
+                                      action: #selector(closePlaceInfoView),
+                                      for: .touchUpInside)
+        closePlaceSearchViewButton.addTarget(self,
+                                             action: #selector(closeSearchPlaceView),
+                                             for: .touchUpInside)
     }
+    
+    
+    //MARK: Handler
     @objc func openSearchView(){
         searchViewHieght.constant = 500
         searchPlaceTableView.reloadData()
         searchPlaceTableView.isHidden = false
         closePlaceInfoView()
     }
+    
     @objc func closePlaceInfoView(){
         placeInfoViewHieght.constant = 0
-        hiddenInfoView(of: true)
+        setInfoView(isHidden: true)
         placeInfoView.layoutIfNeeded()
         for annotation in mapView.selectedAnnotations{
             mapView.deselectAnnotation(annotation,
                                        animated: true)
         }
     }
+    
     @objc func closeSearchPlaceView(){
         searchViewHieght.constant = 0
         placeSearchBar.endEditing(true)

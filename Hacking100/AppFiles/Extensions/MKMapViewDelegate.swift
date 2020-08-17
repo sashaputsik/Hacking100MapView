@@ -6,10 +6,10 @@ extension MapViewController: MKMapViewDelegate{
     func mapView(_ mapView: MKMapView,
                  viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         guard annotation is Honolulu else{return nil}
-        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "cell")
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: MKAnnotationView.id)
         if annotationView == nil{
             annotationView = MKMarkerAnnotationView(annotation: annotation,
-                                                    reuseIdentifier: "cell")
+                                                    reuseIdentifier: MKAnnotationView.id)
             annotationView?.canShowCallout = true
             let infoButton = UIButton(type: .infoLight)
             infoButton.tintColor = .systemRed
@@ -31,7 +31,7 @@ extension MapViewController: MKMapViewDelegate{
                           animated: true)
         placeInfoViewHieght.constant = 214
         placeInfoView.layoutIfNeeded()
-        hiddenInfoView(of: false)
+        setInfoView(isHidden: false)
         
         setPlaceViewInformation(title: place.title,
                                 location: place.location,
@@ -40,10 +40,10 @@ extension MapViewController: MKMapViewDelegate{
     }
     func mapViewDidFailLoadingMap(_ mapView: MKMapView,
                                   withError error: Error) {
-        let alertController = UIAlertController(title: "Error",
+        let alertController = UIAlertController(title: Localizable.error.rawValue,
                                                 message: error.localizedDescription,
                                                 preferredStyle: .alert)
-        let okeyAction = UIAlertAction(title: "Okey",
+        let okeyAction = UIAlertAction(title: Localizable.ok.rawValue,
                                        style: .default,
                                        handler: nil)
         alertController.addAction(okeyAction)
@@ -54,7 +54,11 @@ extension MapViewController: MKMapViewDelegate{
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         searchViewHieght.constant = 0
         placeSearchBar.endEditing(true)
-        
     }
    
+}
+extension MKAnnotationView{
+    public static var id: String{
+        return "cell"
+    }
 }

@@ -2,34 +2,7 @@ import Foundation
 import MapKit
 import UIKit
 extension MapViewController{
-    func parseMap(){
-        guard let url = URL(string: url) else{return}
-               let session = URLSession.shared
-               session.dataTask(with: url) { (data, response, error) in
-                   guard let data = data else{return}
-                   if let json = try? JSONSerialization.jsonObject(with: data,
-                                                                   options: []) as? [[String: Any]]{
-                    for annotation in json{
-                        if let lati = annotation["latitude"] as? NSString, let long = annotation["longitude"] as? NSString{
-                            let annotationMap = Honolulu(dictionary: annotation,
-                                                         coordinate: CLLocationCoordinate2D(latitude: lati.doubleValue,
-                                                                                            longitude: long.doubleValue))
-                            let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: lati.doubleValue,
-                                                                                           longitude: long.doubleValue),
-                                                            latitudinalMeters: 30000,
-                                                            longitudinalMeters: 30000)
-                            DispatchQueue.main.async {
-                                self.mapView.setRegion(region,
-                                                       animated: true)
-                                self.mapView.addAnnotation(annotationMap)
-                            }
-                            guard let title = annotation["title"] as? String else{return}
-                            honoluluPlace.append(title)
-                        }
-                    }
-                }
-               }.resume()
-    }
+    
     func frameAndLayer(){
         placeInfoView.layer.cornerRadius = 10
         placeInfoView.layer.shadowOffset = CGSize(width: 1,
@@ -41,13 +14,16 @@ extension MapViewController{
                                                  height: 1)
         searchButton.layer.cornerRadius = 10
     }
-    func hiddenInfoView(of hidden: Bool){
-        self.placeTitleLabel.isHidden = hidden
-        self.placeDisciplineLabel.isHidden = hidden
-        self.placeDescriptionTextView.isHidden = hidden
-        self.placeLocationLabel.isHidden = hidden
-        self.locationImageView.isHidden = hidden
+    
+    func setInfoView(isHidden: Bool){
+        self.placeTitleLabel.isHidden = isHidden
+        self.placeDisciplineLabel.isHidden = isHidden
+        self.placeDescriptionTextView.isHidden = isHidden
+        self.placeLocationLabel.isHidden = isHidden
+        self.locationImageView.isHidden = isHidden
+        self.closeInfoViewButton.isHidden = isHidden
     }
+    
     func setPlaceViewInformation(title: String?,
                                  location: String,
                                  discipline: String,
@@ -56,22 +32,5 @@ extension MapViewController{
         placeLocationLabel.text = location
         placeDisciplineLabel.text = discipline
         placeDescriptionTextView.text = descriptionInfo
-    }
-    func delegates(){
-        placeSearchBar.delegate = self
-        searchPlaceTableView.delegate = self
-        searchPlaceTableView.dataSource = self
-        mapView.delegate = self
-    }
-    func targets(){
-        searchButton.addTarget(self,
-                               action: #selector(openSearchView),
-                               for: .touchUpInside)
-        closeInfoViewButton.addTarget(self,
-                                      action: #selector(closePlaceInfoView),
-                                      for: .touchUpInside)
-        closePlaceSearchViewButton.addTarget(self,
-                                             action: #selector(closeSearchPlaceView),
-                                             for: .touchUpInside)
     }
 }

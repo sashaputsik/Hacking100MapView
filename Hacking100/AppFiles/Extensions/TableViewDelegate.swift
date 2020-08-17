@@ -5,37 +5,22 @@ import UIKit
 extension MapViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
-        if isSearching {
-            return searchingPlace.count
-        }
-        else{
-            return honoluluPlace.count
-        }
+       return isSearching ? searchingPlace.count : honoluluPlace.count
     }
     
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell",
+        let cell = tableView.dequeueReusableCell(withIdentifier: UITableViewCell.id,
                                                  for: indexPath)
-        if isSearching{
-            cell.textLabel?.text = searchingPlace[indexPath.row]
-        }
-        else{
-            cell.textLabel?.text = honoluluPlace[indexPath.row]
-        }
+        let item = isSearching ? searchingPlace[indexPath.row] : honoluluPlace[indexPath.row]
+        cell.textLabel?.text = item
         return cell
     }
     
     func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath) {
         var placeTitle = ""
-        if isSearching{
-            placeTitle = searchingPlace[indexPath.row]
-        }
-        else{
-            placeTitle = honoluluPlace[indexPath.row]
-        }
-    
+        placeTitle = isSearching ? searchingPlace[indexPath.row] : honoluluPlace[indexPath.row]
         for annotation in mapView.annotations{
             guard let selectedPlace = annotation as? Honolulu else{return}
             if placeTitle == selectedPlace.title{
@@ -59,6 +44,13 @@ extension MapViewController: UITableViewDelegate, UITableViewDataSource{
         placeInfoView.layoutIfNeeded()
         placeSearchBar.endEditing(true)
         searchPlaceTableView.isHidden = true
-        hiddenInfoView(of: false)
+        setInfoView(isHidden: false)
     }    
+}
+
+//MARK: Extension UITableViewCell
+extension UITableViewCell{
+    public static var id: String{
+        return "cell"
+    }
 }
