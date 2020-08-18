@@ -22,9 +22,9 @@ import MapKit
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ParsingMap().parseMap(of: url) { (annotation) in
-            if  let lati = annotation[DTOKeys.latitude.rawValue] as? NSString,
-                let long = annotation[DTOKeys.longitude.rawValue] as? NSString{
+        JsonParse().parseMap(of: url) { (annotation) in
+            if  let lati = annotation[JsonKeys.latitude.rawValue] as? NSString,
+                let long = annotation[JsonKeys.longitude.rawValue] as? NSString{
             let annotationMap = Honolulu(dictionary: annotation,
                                          coordinate: CLLocationCoordinate2D(latitude: lati.doubleValue,
                                                                             longitude: long.doubleValue))
@@ -39,7 +39,6 @@ import MapKit
                 }
             }
         }
-        
         frameAndLayer()
         setInfoView(isHidden: true)
         placeInfoViewHieght.constant = 0
@@ -69,14 +68,16 @@ import MapKit
     
     
     //MARK: Handler
-    @objc func openSearchView(){
+    @objc
+    func openSearchView(){
         searchViewHieght.constant = 500
         searchPlaceTableView.reloadData()
         searchPlaceTableView.isHidden = false
         closePlaceInfoView()
     }
     
-    @objc func closePlaceInfoView(){
+    @objc
+    func closePlaceInfoView(){
         placeInfoViewHieght.constant = 0
         setInfoView(isHidden: true)
         placeInfoView.layoutIfNeeded()
@@ -86,7 +87,8 @@ import MapKit
         }
     }
     
-    @objc func closeSearchPlaceView(){
+    @objc
+    func closeSearchPlaceView(){
         searchViewHieght.constant = 0
         placeSearchBar.endEditing(true)
         placeSearchBar.text = ""

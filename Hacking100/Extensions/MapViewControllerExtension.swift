@@ -4,16 +4,15 @@ import UIKit
 extension MapViewController{
     
     func frameAndLayer(){
-        placeInfoView.layer.cornerRadius = 10
-        placeInfoView.layer.shadowOffset = CGSize(width: 1,
-                                                  height: 1)
-        placeInfoView.layer.shadowOpacity = 0.5
-        searchPlaceTableView.layer.cornerRadius = 10
-        searchButton.layer.shadowOpacity = 0.4
-        searchButton.layer.shadowOffset = CGSize(width: 1,
-                                                 height: 1)
-        searchButton.layer.cornerRadius = 10
-    }
+        placeInfoView.layer.cornerRadius = CGFloat(Appearance().cornerRadius)
+        placeInfoView.layer.shadowOffset = Appearance().shadowOffset
+        placeInfoView.layer.shadowOpacity = Float(Appearance().shadowOpacity)
+        searchPlaceTableView.layer.cornerRadius = CGFloat(Appearance().cornerRadius)
+        searchButton.layer.shadowOpacity = Float(Appearance().shadowOpacity)
+        searchButton.layer.shadowOffset = Appearance().shadowOffset
+        searchButton.layer.cornerRadius = CGFloat(Appearance().cornerRadius)
+        }
+    
     
     func setInfoView(isHidden: Bool){
         self.placeTitleLabel.isHidden = isHidden
@@ -32,5 +31,14 @@ extension MapViewController{
         placeLocationLabel.text = location
         placeDisciplineLabel.text = discipline
         placeDescriptionTextView.text = descriptionInfo
+    }
+}
+
+private extension MapViewController{
+    
+    struct Appearance {
+        let cornerRadius = 10
+        let shadowOpacity = 0.5
+        let shadowOffset = CGSize(width: 1, height: 1)
     }
 }

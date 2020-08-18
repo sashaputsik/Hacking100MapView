@@ -17,19 +17,19 @@ class Honolulu: NSObject, MKAnnotation {
     init(dictionary: [String: Any],
          coordinate: CLLocationCoordinate2D){
         self.coordinate = coordinate
-        self.creator = dictionary[DTOKeys.creator.rawValue] as? String ?? ""
-        self.credit = dictionary[DTOKeys.credit.rawValue] as? String ?? ""
-        self.descriptionInfo = dictionary[DTOKeys.description.rawValue] as? String ?? ""
-        self.discipline = dictionary[DTOKeys.discipline.rawValue] as? String ?? ""
-        self.imageFile = dictionary[DTOKeys.imageFile.rawValue] as? String ?? ""
-        self.objectId = dictionary[DTOKeys.objectId.rawValue] as? String ?? ""
-        self.title = dictionary[DTOKeys.title.rawValue] as? String ?? ""
-        self.location = dictionary[DTOKeys.location.rawValue] as? String ?? ""
+        self.creator = dictionary[JsonKeys.creator.rawValue] as? String ?? ""
+        self.credit = dictionary[JsonKeys.credit.rawValue] as? String ?? ""
+        self.descriptionInfo = dictionary[JsonKeys.description.rawValue] as? String ?? ""
+        self.discipline = dictionary[JsonKeys.discipline.rawValue] as? String ?? ""
+        self.imageFile = dictionary[JsonKeys.imageFile.rawValue] as? String ?? ""
+        self.objectId = dictionary[JsonKeys.objectId.rawValue] as? String ?? ""
+        self.title = dictionary[JsonKeys.title.rawValue] as? String ?? ""
+        self.location = dictionary[JsonKeys.location.rawValue] as? String ?? ""
     }
 }
 
 
-enum DTOKeys: String{
+enum JsonKeys: String{
     case latitude = "latitude"
     case longitude = "longitude"
     case creator = "creator"
@@ -42,7 +42,4 @@ enum DTOKeys: String{
     case location = "location"
 }
 
-enum Localizable: String{
-    case ok = "Okey"
-    case error = "Error"
-}
+

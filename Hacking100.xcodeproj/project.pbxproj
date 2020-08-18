@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F2A45FF24EC1DF100189FA6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9F2A460124EC1DF100189FA6 /* Localizable.strings */; };
+		9F2A460524EC25DA00189FA6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2A460424EC25DA00189FA6 /* String.swift */; };
 		9F4CB32C24E434B9000C50E5 /* SearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4CB32B24E434B9000C50E5 /* SearchBarDelegate.swift */; };
 		9F4CB32E24E4420B000C50E5 /* TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4CB32D24E4420B000C50E5 /* TableViewDelegate.swift */; };
 		9F8D96BF24DADC8A00526B57 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8D96BE24DADC8A00526B57 /* MapViewController.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F2A460024EC1DF100189FA6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9F2A460424EC25DA00189FA6 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		9F4CB32B24E434B9000C50E5 /* SearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarDelegate.swift; sourceTree = "<group>"; };
 		9F4CB32D24E4420B000C50E5 /* TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDelegate.swift; sourceTree = "<group>"; };
 		9F8D96BE24DADC8A00526B57 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +72,7 @@
 		9FDE148D24D2FF09006A1395 /* Hacking100 */ = {
 			isa = PBXGroup;
 			children = (
+				9FFAE6C224D6DF4700968EB3 /* Extensions */,
 				9FFAE6C124D6DF3C00968EB3 /* Base */,
 				9FFAE6BE24D6DF0C00968EB3 /* AppFiles */,
 				9FFAE6C424D6DF6100968EB3 /* Storyboards */,
@@ -84,7 +89,6 @@
 				9FDE149C24D2FF0A006A1395 /* Info.plist */,
 				9FDE149924D2FF0A006A1395 /* LaunchScreen.storyboard */,
 				9FDE149024D2FF09006A1395 /* SceneDelegate.swift */,
-				9FFAE6C224D6DF4700968EB3 /* Extensions */,
 			);
 			path = AppFiles;
 			sourceTree = "<group>";
@@ -94,6 +98,7 @@
 			children = (
 				9F8D96C024DAE43C00526B57 /* Honolulu.swift */,
 				9FCF4B7124EACE6D00545935 /* Parse.swift */,
+				9F2A460124EC1DF100189FA6 /* Localizable.strings */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -105,6 +110,7 @@
 				9F8D96C424DB3FE300526B57 /* MKMapViewDelegate.swift */,
 				9F4CB32B24E434B9000C50E5 /* SearchBarDelegate.swift */,
 				9F4CB32D24E4420B000C50E5 /* TableViewDelegate.swift */,
+				9F2A460424EC25DA00189FA6 /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -151,6 +157,9 @@
 		9FDE148324D2FF09006A1395 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Sasha Putsikovich";
@@ -184,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FDE149B24D2FF0A006A1395 /* LaunchScreen.storyboard in Resources */,
+				9F2A45FF24EC1DF100189FA6 /* Localizable.strings in Resources */,
 				9FDE149824D2FF0A006A1395 /* Assets.xcassets in Resources */,
 				9FDE149624D2FF09006A1395 /* Main.storyboard in Resources */,
 			);
@@ -197,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F4CB32E24E4420B000C50E5 /* TableViewDelegate.swift in Sources */,
+				9F2A460524EC25DA00189FA6 /* String.swift in Sources */,
 				9F8D96C524DB3FE300526B57 /* MKMapViewDelegate.swift in Sources */,
 				9FDE148F24D2FF09006A1395 /* AppDelegate.swift in Sources */,
 				9F8D96BF24DADC8A00526B57 /* MapViewController.swift in Sources */,
@@ -211,6 +222,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		9F2A460124EC1DF100189FA6 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F2A460024EC1DF100189FA6 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		9FDE149424D2FF09006A1395 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

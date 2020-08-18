@@ -40,10 +40,10 @@ extension MapViewController: MKMapViewDelegate{
     }
     func mapViewDidFailLoadingMap(_ mapView: MKMapView,
                                   withError error: Error) {
-        let alertController = UIAlertController(title: Localizable.error.rawValue,
+        let alertController = UIAlertController(title: String(.error),
                                                 message: error.localizedDescription,
                                                 preferredStyle: .alert)
-        let okeyAction = UIAlertAction(title: Localizable.ok.rawValue,
+        let okeyAction = UIAlertAction(title: String(.okey),
                                        style: .default,
                                        handler: nil)
         alertController.addAction(okeyAction)
