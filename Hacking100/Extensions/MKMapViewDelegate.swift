@@ -25,8 +25,8 @@ extension MapViewController: MKMapViewDelegate{
         guard let place = view.annotation as? Honolulu else{return}
         mapView.setCenter(place.coordinate, animated: true)
         let region = MKCoordinateRegion(center: place.coordinate,
-                                        latitudinalMeters: 1500,
-                                        longitudinalMeters: 1500)
+                                        latitudinalMeters: 1000,
+                                        longitudinalMeters: 1000)
         mapView.setRegion(region,
                           animated: true)
         placeInfoViewHieght.constant = 214

@@ -3,6 +3,7 @@ import MapKit
 
 var honoluluPlace = [String]()
 var searchingPlace = [String]()
+let url = "https://data.honolulu.gov/resource/yef5-h88r.json"
 
 class Honolulu: NSObject, MKAnnotation {
     var coordinate: CLLocationCoordinate2D

@@ -1,8 +1,9 @@
 import UIKit
 import MapKit
+import CoreLocation
 
- final class MapViewController: UIViewController{
-    let url = "https://data.honolulu.gov/resource/yef5-h88r.json"
+
+final class MapViewController: UIViewController{
     var isSearching = false
     @IBOutlet private(set) var mapView: MKMapView!
     @IBOutlet weak var placeTitleLabel: UILabel!
@@ -20,6 +21,9 @@ import MapKit
     @IBOutlet weak var placeSearchBar: UISearchBar!
     @IBOutlet weak var closePlaceSearchViewButton: UIButton!
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         JsonParse().parseMap(of: url) { (annotation) in

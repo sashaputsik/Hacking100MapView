@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hHE-OP-UGs">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -80,7 +81,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o0E-0y-Vr1">
-                                <rect key="frame" x="16" y="433" width="343" height="214"/>
+                                <rect key="frame" x="10" y="433" width="355" height="214"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brodway street" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gvJ-5V-Dfs">
                                         <rect key="frame" x="32" y="10" width="277" height="15"/>
@@ -93,7 +94,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manufacture festival" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpF-ij-Grs">
-                                        <rect key="frame" x="8" y="42" width="327" height="17.5"/>
+                                        <rect key="frame" x="8" y="42" width="339" height="17.5"/>
                                         <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -106,14 +107,14 @@
                                         </constraints>
                                     </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Oh9-47-SAi">
-                                        <rect key="frame" x="8" y="94.5" width="327" height="111.5"/>
+                                        <rect key="frame" x="8" y="94.5" width="339" height="111.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5a-7V-uWL">
-                                        <rect key="frame" x="315" y="10" width="20" height="22"/>
+                                        <rect key="frame" x="315" y="10" width="32" height="22"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" image="clear" catalog="system">
@@ -121,7 +122,7 @@
                                         </state>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sculpture" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSn-bG-zvH">
-                                        <rect key="frame" x="8" y="69.5" width="327" height="15"/>
+                                        <rect key="frame" x="8" y="69.5" width="339" height="15"/>
                                         <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -138,6 +139,7 @@
                                     <constraint firstItem="lgv-sO-8DX" firstAttribute="leading" secondItem="o0E-0y-Vr1" secondAttribute="leading" constant="8" id="KcI-b0-sJ2"/>
                                     <constraint firstItem="lpF-ij-Grs" firstAttribute="leading" secondItem="lgv-sO-8DX" secondAttribute="leading" id="Kqg-dR-ae5"/>
                                     <constraint firstItem="A5a-7V-uWL" firstAttribute="leading" secondItem="gvJ-5V-Dfs" secondAttribute="trailing" constant="6" id="M0q-ge-Xcm"/>
+                                    <constraint firstAttribute="trailing" secondItem="Oh9-47-SAi" secondAttribute="trailing" constant="8" id="NK3-Q8-YG6"/>
                                     <constraint firstAttribute="height" constant="214" id="UrU-eI-dw4"/>
                                     <constraint firstItem="A5a-7V-uWL" firstAttribute="trailing" secondItem="lpF-ij-Grs" secondAttribute="trailing" id="VOj-qH-A7f"/>
                                     <constraint firstItem="gvJ-5V-Dfs" firstAttribute="leading" secondItem="lgv-sO-8DX" secondAttribute="trailing" constant="8" id="Z8c-An-tV2"/>
@@ -147,6 +149,7 @@
                                     <constraint firstItem="gvJ-5V-Dfs" firstAttribute="top" secondItem="lgv-sO-8DX" secondAttribute="top" id="ncl-Rz-G10"/>
                                     <constraint firstItem="cSn-bG-zvH" firstAttribute="trailing" secondItem="lpF-ij-Grs" secondAttribute="trailing" id="pr0-sp-mKH"/>
                                     <constraint firstItem="Oh9-47-SAi" firstAttribute="trailing" secondItem="lpF-ij-Grs" secondAttribute="trailing" id="um4-aK-gMa"/>
+                                    <constraint firstItem="Oh9-47-SAi" firstAttribute="leading" secondItem="o0E-0y-Vr1" secondAttribute="leading" constant="8" id="zl6-ji-hSl"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGO-2V-y2G">
@@ -166,11 +169,11 @@
                         <constraints>
                             <constraint firstItem="MYf-Fd-LEe" firstAttribute="top" secondItem="tYA-IE-WNb" secondAttribute="top" id="3yq-UB-aRj"/>
                             <constraint firstItem="MYf-Fd-LEe" firstAttribute="leading" secondItem="tYA-IE-WNb" secondAttribute="leading" id="9PL-oA-kjC"/>
-                            <constraint firstItem="tYA-IE-WNb" firstAttribute="trailing" secondItem="o0E-0y-Vr1" secondAttribute="trailing" constant="16" id="9yW-eq-MQi"/>
+                            <constraint firstItem="tYA-IE-WNb" firstAttribute="trailing" secondItem="o0E-0y-Vr1" secondAttribute="trailing" constant="10" id="9yW-eq-MQi"/>
                             <constraint firstItem="EGO-2V-y2G" firstAttribute="top" secondItem="tYA-IE-WNb" secondAttribute="top" constant="10" id="ImY-YK-5mg"/>
                             <constraint firstItem="MYf-Fd-LEe" firstAttribute="trailing" secondItem="tYA-IE-WNb" secondAttribute="trailing" id="Kh5-0S-jX0"/>
                             <constraint firstItem="tYA-IE-WNb" firstAttribute="trailing" secondItem="EGO-2V-y2G" secondAttribute="trailing" constant="16" id="ZtO-Iz-8OP"/>
-                            <constraint firstItem="o0E-0y-Vr1" firstAttribute="leading" secondItem="tYA-IE-WNb" secondAttribute="leading" constant="16" id="a1U-gq-mtJ"/>
+                            <constraint firstItem="o0E-0y-Vr1" firstAttribute="leading" secondItem="tYA-IE-WNb" secondAttribute="leading" constant="10" id="a1U-gq-mtJ"/>
                             <constraint firstItem="nlo-yb-IJ3" firstAttribute="leading" secondItem="tYA-IE-WNb" secondAttribute="leading" id="kQR-wC-5dK"/>
                             <constraint firstItem="nlo-yb-IJ3" firstAttribute="trailing" secondItem="tYA-IE-WNb" secondAttribute="trailing" id="kvk-an-FgX"/>
                             <constraint firstItem="MYf-Fd-LEe" firstAttribute="bottom" secondItem="tYA-IE-WNb" secondAttribute="bottom" id="lYo-Yi-8pA"/>
